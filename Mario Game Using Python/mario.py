@@ -13,20 +13,26 @@ cactus_img_rect = cactus_img.get_rect()
 cactus_img_rect.left = 0
 fire_img = pygame.image.load('images/fire_bricks.png')
 fire_img_rect = fire_img.get_rect()
+
 fire_img_rect.left = 0
+
 CLOCK = pygame.time.Clock()
+
 font = pygame.font.SysFont('forte', 20)
 
 canvas = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
+
 pygame.display.set_caption('Mario')
 
 
 class Topscore:
     def __init__(self):
         self.high_score = 0
+        
     def top_score(self, score):
         if score > self.high_score:
             self.high_score = score
+            
         return self.high_score
 
 topscore = Topscore()
